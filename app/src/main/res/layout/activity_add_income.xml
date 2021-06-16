@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".activity.AddAccountsActivity">
+
+        <ImageView
+            android:id="@+id/ivAccountLogo"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginBottom="116dp"
+            android:paddingStart="16dp"
+            android:paddingTop="16dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="16dp"
+            app:layout_constraintBottom_toTopOf="@+id/llSAccount"
+            app:layout_constraintDimensionRatio="2:1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_income" />
+
+        <LinearLayout
+            android:id="@+id/llSAccount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            app:layout_constraintTop_toBottomOf="@+id/ivAccountLogo"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:textColor="@color/colorPrimaryDark"
+                android:text="@string/account"/>
+
+            <Spinner
+                android:id="@+id/spAccount"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"/>
+
+        </LinearLayout>
+
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilAmount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="16dp"
+            android:hint="@string/amount"
+            app:errorEnabled="true"
+            app:layout_constraintTop_toBottomOf="@+id/llSAccount">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtAmount"
+                android:layout_width="match_parent"
+                android:background="@android:color/transparent"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@android:color/transparent"
+            android:hint="@string/details"
+            app:errorEnabled="true"
+            app:layout_constraintTop_toBottomOf="@+id/tilAmount">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/txtDetails"
+                android:layout_width="match_parent"
+                android:background="@android:color/transparent"
+                android:layout_height="wrap_content"
+                android:maxLines="2"
+                android:inputType="textEmailAddress" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:background="@android:color/transparent"
+            android:layout_marginBottom="8dp"
+            android:id="@+id/llDate"
+            android:weightSum="100"
+            app:layout_constraintTop_toBottomOf="@+id/tilDetails">
+
+            <Button
+                android:id="@+id/bDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:paddingTop="12dp"
+                android:layout_weight="50"
+                android:paddingBottom="12dp"
+                android:text="@string/select_date"
+                android:textAlignment="textStart"
+                android:layout_marginStart="8dp"/>
+
+            <TextView
+                android:id="@+id/tvDate"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:paddingTop="12dp"
+                android:layout_weight="50"
+                android:paddingBottom="12dp"
+                android:text="@string/date"
+                android:gravity="center_vertical"
+                android:layout_marginStart="8dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="100"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/bCancel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="50"
+                android:layout_margin="10dp"
+                android:text="@string/cancel"
+                android:textColor="@android:color/white"
+                android:theme="@style/MyCancelButton"
+                android:visibility="visible"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/bSave"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="50"
+                android:layout_margin="10dp"
+                android:text="@string/save"
+                android:textColor="@android:color/white"
+                android:theme="@style/MyButtonDark"
+                android:visibility="visible"/>
+        </LinearLayout>
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

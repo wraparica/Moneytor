@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">Moneytor</string>
+    <string name="accounts">Accounts</string>
+    <string name="account">Account</string>
+    <string name="expenses">Expenses</string>
+    <string name="income">Income</string>
+    <string name="no_income">No Income</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+    <string name="no_accounts">No Accounts</string>
+    <string name="no_expenses">No Expenses</string>
+    <string name="account_name">Account Name</string>
+    <string name="account_code">Account Code</string>
+    <string name="initial_amount">Initial Amount</string>
+    <string name="moneytor_your">Moneytor Your</string>
+    <string name="details">Details</string>
+    <string name="amount">Amount</string>
+    <string name="date">Date</string>
+    <string name="select_date">Select Date</string>
+    <string name="kindly_add_account_before_adding_income">Kindly add an account before adding income</string>
+    <string name="kindly_add_account_before_adding_expenses">Kindly add an account before adding expenses</string>
+</resources>
